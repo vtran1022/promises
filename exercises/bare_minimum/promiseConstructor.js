@@ -15,7 +15,8 @@ var pluckFirstLineFromFileAsync = function(filePath) {
       if (err) {
         reject(err);
       } else {
-        resolve(data.toString().split('\n')[0]);
+        var firstLine = data.toString().split('\n')[0];
+        resolve(firstLine);
       }
     });
   });
